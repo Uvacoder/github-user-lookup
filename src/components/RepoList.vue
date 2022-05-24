@@ -2,7 +2,7 @@
 	<div class="flex justify-center mt-4">
 		<div
 			class="grid grid-cols-2 gap-px w-8/12 columns-2 bg-gray-800 rounded-lg overflow-auto p-4"
-			style="height: 65vh"
+			style="height: 62vh"
 			:key="componentKey"
 		>
 			<!-- repository details -->

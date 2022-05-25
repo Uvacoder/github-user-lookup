@@ -1,4 +1,5 @@
 import axios from "axios";
+import router from "../router";
 
 export default {
 	getUserData: async (username) => {
@@ -8,7 +9,11 @@ export default {
 			);
 			return response.data;
 		} catch (error) {
-			console.log(error);
+			if (error.response.data?.message === "Not Found") {
+				router.push("/user-not-found");
+			} else {
+				console.error(error);
+			}
 		}
 	},
 	getAllRepos: async (username, pageNumber) => {
@@ -18,7 +23,11 @@ export default {
 			);
 			return response;
 		} catch (error) {
-			console.log(error);
+			if (error.response.data?.message === "Not Found") {
+				router.push("/user-not-found");
+			} else {
+				console.error(error);
+			}
 		}
 	},
 };

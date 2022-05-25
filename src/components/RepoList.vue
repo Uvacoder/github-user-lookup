@@ -1,6 +1,7 @@
 <template>
-	<div class="flex justify-center mt-4">
+	<div class="flex justify-center items-center mt-4">
 		<div
+			v-if="repoData.data.length > 0"
 			class="grid grid-cols-2 gap-px w-8/12 columns-2 bg-gray-800 rounded-lg overflow-auto p-4"
 			style="height: 62vh"
 			:key="componentKey"
@@ -44,6 +45,12 @@
 						{{ topic }}
 					</div>
 				</div>
+			</div>
+		</div>
+		<div v-else class="flex justify-center items-center h-full w-full mt-5">
+			<div class="text-white text-2xl">
+				<span class="text-green-400">@{{ props.username }}</span> does
+				not have any repositories
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,13 @@
 <template>
 	<div
-		class="bg-gradient-to-br from-black via-gray-700 to-gray-500 h-screen w-screen flex flex-col justify-center items-center"
+		class="bg-gradient-to-br from-black via-gray-700 to-gray-500 flex flex-col justify-center items-center h-screen w-screen"
 	>
 		<router-link :to="'/'"
 			><img class="h-20" src="/images/github.svg" alt="GitHub Logo"
 		/></router-link>
-		<div class="mt-1 font-semibold text-4xl text-white">GitHub Lookup</div>
+		<div class="mt-1 text-4xl text-red-500">User not found</div>
+		<div class="mt-1 text-2xl text-white">Please try again</div>
+
 		<div class="mt-3 flex justify-center items-center">
 			<form
 				v-on:submit.prevent="searchUser"
@@ -26,7 +28,6 @@
 		</div>
 	</div>
 </template>
-
 <script setup>
 import { ref } from "vue";
 import router from "../router";

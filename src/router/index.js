@@ -16,6 +16,11 @@ const routes = [
 		name: "Lookup username",
 		component: () => import("../pages/Lookup.vue"),
 	},
+	{
+		path: "/user-not-found",
+		name: "User Not Found",
+		component: () => import("../pages/UserNotFound.vue"),
+	},
 ];
 
 const router = createRouter({

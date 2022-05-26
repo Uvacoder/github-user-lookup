@@ -59,7 +59,7 @@ Start the server
 | :--------- | :------- | :----------------------------------------------------------------------- |
 | `username` | `string` | **Required**. Give the username for which you want to retrieve the data. |
 
-#### Get item
+#### Get all public repositories
 
 ```http
   GET `https://api.github.com/users/${username}/repos?per_page=10&page=${pageNumber}`
